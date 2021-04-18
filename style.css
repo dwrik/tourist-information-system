@@ -1,0 +1,209 @@
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800");
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #121212; }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+img {
+  max-width: 100%; }
+
+a:focus {
+  text-decoration: none;
+  outline: none; }
+
+a:focus,
+a:hover {
+  text-decoration: none; }
+
+i,
+a {
+  display: inline-block; }
+
+h1,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #121212;
+  margin: 0px; }
+
+h1 {
+  font-size: 48px; }
+
+h3 {
+  font-size: 28px; }
+
+h4 {
+  font-size: 22px; }
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none; }
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #121212;
+  margin: 0px; }
+
+.mt-40 {
+  margin-top: 40px;
+}
+.pb-10 {
+  padding-bottom: 10px;
+}
+
+
+.section-title .title {
+  font-size: 44px;
+  font-weight: 600;
+  color: #121212;
+  line-height: 55px; }
+
+.section-title .text {
+  font-size: 16px;
+  line-height: 24px;
+  color: #6c6c6c;
+  margin-top: 24px; }
+
+
+
+.navbar-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 99; }
+  .navbar-area .navbar {
+    position: relative;
+    padding: 0; }
+    
+    .navbar-area .navbar .navbar-btn li {
+      display: inline-block;
+      margin-right: 5px; }
+      .navbar-area .navbar .navbar-btn li a {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px 16px;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #fff;
+        border: 2px solid;
+        border-radius: 4px;
+        -webkit-transition: all 0.3s ease-out 0s;
+        -moz-transition: all 0.3s ease-out 0s;
+        -ms-transition: all 0.3s ease-out 0s;
+        -o-transition: all 0.3s ease-out 0s;
+        transition: all 0.3s ease-out 0s;
+         }
+        .navbar-area .navbar .navbar-btn li a.solid {
+          background-color: #fff;
+          border-color: #fff;
+          color: #0067f4;
+           }
+          .navbar-area .navbar .navbar-btn li a.solid:hover {
+            background-color: transparent;
+            color: #fff; }
+
+
+.carousel-item {
+  background-color: #0067f4;
+  position: relative; }
+  .carousel-item::before {
+    position: absolute;
+    content: '';
+    width: 33%;
+    height: 100%;
+    background: -webkit-linear-gradient(rgba(0, 103, 244, 0.3) 0%, rgba(43, 219, 220, 0.3) 100%);
+    background: -o-linear-gradient(rgba(0, 103, 244, 0.3) 0%, rgba(43, 219, 220, 0.3) 100%);
+    background: linear-gradient(rgba(0, 103, 244, 0.3) 0%, rgba(43, 219, 220, 0.3) 100%);
+    top: 0;
+    right: 15%;
+    -webkit-transform: skewX(20deg);
+    -moz-transform: skewX(20deg);
+    -ms-transform: skewX(20deg);
+    -o-transform: skewX(20deg);
+    transform: skewX(20deg); }
+    
+  .carousel-item .slider-image-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 9; }
+    .carousel-item .slider-image-box .slider-image {
+      max-width: 680px;
+      width: 100%; }
+
+.slider-content {
+  position: relative;
+  z-index: 9;
+  padding-top: 240px;
+  padding-bottom: 200px; }
+  
+  .slider-content .text {
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 16px; }
+
+
+.features-area {
+  background-color: #f4f6f7;
+  padding-top: 120px;
+  padding-bottom: 130px; }
+
+.single-features {
+  padding: 40px 20px 52px;
+  background-color: #fff; }
+  .single-features .features-title-icon .features-title a {
+    font-size: 36px;
+    line-height: 45px;
+    color: #121212;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+    font-weight: 400; }
+    
+    .single-features .features-title-icon .features-title a:hover {
+      color: #0067f4; }
+  .single-features .features-title-icon .features-icon {
+    position: relative;
+    display: inline-block; }
+    .single-features .features-title-icon .features-icon i {
+      font-size: 88px;
+      line-height: 70px;
+      color: #0067f4;
+      position: relative;
+      z-index: 5; }
+    .single-features .features-title-icon .features-icon .shape {
+      position: absolute;
+      top: 0;
+      left: 0; }
+  .single-features .features-content .text {
+    font-size: 14px;
+    line-height: 20px;
+    color: #121212;
+    margin-top: 16px; }
+  .single-features .features-content .features-btn {
+    color: #0067f4;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 29px; }
+
