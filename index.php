@@ -8,8 +8,8 @@
     <meta charset="utf-8">
     <title>Tourist Information System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -76,8 +76,8 @@
     
                             </div>
                             <div class="features-content">
-                                    <img class="shape" src="<?php echo $row->cover ?>" alt="Shape">
-                                    <p class="text"><?php echo $row->description ?></p>
+                                <img src="admin/<?php echo $row->cover ?>" alt="cover">
+                                <p class="text"><?php echo $row->description ?></p>
                             </div>
                         </div> <!-- single features -->
                     </div>

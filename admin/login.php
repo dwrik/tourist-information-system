@@ -30,9 +30,9 @@ if (isset($_POST['email'])) {
 ?>
 <html>
 <head>
-    <link rel="stylesheet" href="login.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
     <title>Tourist Information System</title>
 </head>
 <body>
@@ -46,7 +46,7 @@ if (isset($_POST['email'])) {
                 <p style="color: red;"><?php echo $login_err ?></p>
                 <input type="submit" value="Log In">
             </form>
-            <a href="/index.php">Back</a>
+            <a href="../index.php">Back</a>
         </div>
     </div>
 </body>

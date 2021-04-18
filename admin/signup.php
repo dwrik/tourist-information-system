@@ -32,7 +32,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../css/login.css">
     <title>Sign up</title>
 </head>
 <body>
@@ -48,7 +48,7 @@
                 <p style="color: red;"><?php echo $login_err ?></p>
                 <input type="submit" value="Request">
             </form>
-            <a href="/index.php">Back</a>
+            <a href="../index.php">Back</a>
         </div>
     </div>
 </body>

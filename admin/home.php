@@ -64,8 +64,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../bootstrap.min.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Admin Panel</title>
 </head>
 <body>
@@ -98,16 +98,16 @@
                     $result = mysqli_query($conn, $query);
             ?>
                     <h2><?php echo $category_name ?></h2>
-                    <a href="destinations.php?category=<?php echo $category_id ?>&operation=add">
-                        <button>Add Place</button>
+                    <a style="margin:10px 0px" href="destinations.php?category=<?php echo $category_id ?>&operation=add">
+                        Add Place
                     </a>
                     <table>
                         <?php while ($row = mysqli_fetch_object($result)) { ?>
                             <tr>
-                                <td><?php echo $row->name ?></td>
                                 <td>
-                                    <img src="<?php echo $row->cover ?>" alt="Cover">
+                                    <img width=50 height=40 src="<?php echo $row->cover ?>" alt="Cover">
                                 </td>
+                                <td><?php echo $row->name ?></td>
                                 <td>
                                     <a href=<?php echo 'destinations.php?'
                                         . 'category=' . $category_id
@@ -151,32 +151,33 @@
                     $result = mysqli_query($conn, $query);
             ?>
                     <h2>Categories</h2>
-                    <a href="categories.php?operation=add">
-                        <button>Add Category</button>
+                    <a style="margin:10px 0px" href="categories.php?operation=add">
+                        Add Category
                     </a>
-                    <div class="row justify-content-center">
-                    <?php while ($row = mysqli_fetch_object($result)) { ?>
-                        <div class="col-lg-4 col-md-7 col-sm-9">
-                            <div class="single-features mt-40">
-                                <div class="features-title-icon d-flex justify-content-between">
-                                    <h4 class="features-title">
-                                        <a href="<?php echo '?category=' . $row->id ?>"><?php echo $row->name ?></a>
-                                    </h4>
-                                </div>
-                                <div class="features-content">
-                                    <img class="shape" src="<?php echo $row->cover ?>" alt="Shape">
-                                    <p class="text"><?php echo $row->description ?></p>
-                                </div>
-                                <a href=<?php echo 'categories.php?'
-                                    . 'id=' . $row->id
-                                    . '&operation=update'?>>Update</a>
-                                <a href=<?php echo '?category=' . $row->id . '&operation=delete' ?>>Delete</a>
-                            </div> <!-- single features -->
-                        </div>
+                    <table>
+                <?php while ($row = mysqli_fetch_object($result)) { ?>
+                            <tr>
+                                <td>
+                                    <img width=50 height=40 src="<?php echo $row->cover ?>" alt="Cover">
+                                </td>
+                                <td>
+                                    <a href="?category=<?php echo $row->id ?>"><?php echo $row->name ?></a>
+                                </td>
+                                <td>
+                                    <a href=<?php echo 'categories.php?'
+                                        . 'id=' . $row->id
+                                        . '&operation=update'?>>Update</a>
+                                </td>
+                                <td>|</td>
+                                <td>
+                                    <a href=<?php echo '?category='
+                                        . $row->id . '&operation=delete' ?>>Delete</a>
+                                </td>
+                            </tr>
                 <?php
                     }
                 ?>
-                </div> <!-- row -->
+                </table>
             <?php
                 }
             ?>
